@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      .pw{
+        width: 100vw;
+        height: 100vh;
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pw img{
+        border-radius: 50%;
+        /* transition-property: all;
+    transition-duration: 2s; */
+    animation: shake 0.1s linear 0.1s infinite alternate ;
+      }
+      @keyframes shake {
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(5px); 
+        }
+      }
+      .pw::before{
+           content: "";
+           position: absolute;
+            width: 50px;
+            height: 50px;
+           
+         border: 2px solid grey;
+         border-radius: 50%;
+         animation: increase 3s ease-out 0.1s infinite ;
+        
+        }
+        
+@keyframes increase{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    25%{
+        width: 5vw;
+        height: 5vw;
+    }
+   45%{
+    opacity: 0.5;
+    width: 15vw;
+    height: 15vw;
+   }
+   
+   100%{
+    opacity: 0.1;
+    width: 50vw;
+        height: 50vw;
+    }
+    
+}
+@media (max-width:660px) {
+    @keyframes increase{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    25%{
+        width: 5vw;
+        height: 5vw;
+    }
+   45%{
+    opacity: 0.5;
+    width: 35vw;
+    height: 35vw;
+   }
+   
+   100%{
+    opacity: 0.1;
+    width: 50vw;
+        height: 50vw;
+    }
+    
+}
+    
+}
+    </style>
+</head>
+<body>
+    
+    <section class="pw"><img src="./no_bg.png" alt="" width="100px"></section>
+</body>
+</html>
